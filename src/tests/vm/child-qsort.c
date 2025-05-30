@@ -9,14 +9,15 @@
 #include "tests/main.h"
 #include "tests/vm/qsort.h"
 
+
 int
 main (int argc UNUSED, char *argv[]) 
 {
+  test_name = "child-qsort";
   int handle;
   unsigned char buf[128 * 1024];
   size_t size;
 
-  test_name = "child-qsort";
   quiet = true;
 
   CHECK ((handle = open (argv[1])) > 1, "open \"%s\"", argv[1]);

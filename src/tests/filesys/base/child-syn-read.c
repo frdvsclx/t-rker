@@ -11,16 +11,18 @@
 #include "tests/lib.h"
 #include "tests/filesys/base/syn-read.h"
 
+
+
 static char buf[BUF_SIZE];
 
 int
 main (int argc, const char *argv[]) 
 {
+  test_name = "child-syn-read";
   int child_idx;
   int fd;
   size_t i;
 
-  test_name = "child-syn-read";
   quiet = true;
   
   CHECK (argc == 2, "argc must be 2, actually %d", argc);
